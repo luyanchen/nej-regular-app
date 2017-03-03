@@ -24,7 +24,7 @@ nej-app是采用网易前端框架<a href="https://github.com/NEYouFan/nej-frame
     <li>缓存cache</li>
     <li>常用模块:element,event,util,chain,ajax,jst,cache,tab,list等</li>
  </ul>
- ##app涉及Regular主要特性包括：
+ ###app涉及Regular主要特性包括：
  <ul>
     <li>模板</li>
     <li>组件</li>
@@ -32,6 +32,7 @@ nej-app是采用网易前端框架<a href="https://github.com/NEYouFan/nej-frame
     <li>事件</li>
     <li>过滤器</li>
  </ul>
+ 
  ###run:
  1. 启动服务器（<a href="https://github.com/luyanchen/node-blog/">nodejs+express+mongodb</a>）
  2. 将/nej-regular-app/src/html/app.html和/nej-regular-app/src/html/login.html中的API_PATH改为服务器API路径(如：<a href="https://github.com/luyanchen/node-blog/">nodejs+express+mongodb</a>中的地址为http://localhost:3000/)
@@ -55,10 +56,8 @@ nej-app是采用网易前端框架<a href="https://github.com/NEYouFan/nej-frame
  <li><a href="#regular">Regular组件</a></li>
  </ul>
 <h4><div id="module">模块组成</div></h4>
-目录
-<img src="https://github.com/luyanchen/nej-regular-app/blob/master/res/dispaly/14.png" width = "30%" />
-两个入口文件：app.html和login.html,分别对应两个单页面。
-
+目录两个入口文件：app.html和login.html,分别对应两个单页面。
+<div><img src="https://github.com/luyanchen/nej-regular-app/blob/master/res/dispaly/14.png" width = "30%" /></div>
 每个页面对应一个布局模块+子功能模块，如：博客正文：
 <pre><code>                  
 //博客正文
