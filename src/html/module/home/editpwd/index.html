@@ -1,0 +1,31 @@
+<meta charset="utf-8"/>
+<textarea name="txt" id="module-id-d11">
+  <div></div>
+</textarea>
+<textarea name="txt" id="regular-rgl-11">
+<div>
+<form id="myform" method="post">
+  <div class="m-editpwd-wrap" >
+    <div class="u-div-30"></div>
+    <div class="page" on-click = {clearmsg} >
+      <input r-model="oldpwd" class="u-input" type="password" name="oldpassword" autocomplete="off" placeholder="原密码" on-click={this.clearmsg()} on-keyup={this.checkEmpty()}/>
+      <div  class="u-div-10"></div>
+      <input r-model="pwd" class="u-input" type="password" name="password" autocomplete="off" placeholder="新密码" on-click={this.clearmsg()} on-keyup={this.checkEmpty()}/>
+      <input r-model="repwd" class="u-input" type="password" name="repassword" autocomplete="off" placeholder="确认新密码" on-click={this.clearmsg()} on-keyup={this.checkEmpty()}/>
+      <div class="u-div-50"></div>
+      <div class="u-btn-wrap">
+        <div class="u-btn default " r-class={btn} on-click={this.submit()}>完成</div>
+      </div>
+      <div class="u-div-20"></div>
+      <div class="u-tips">  
+        <div r-class={msgclass} >{msg}</div>
+      </div>
+  </div>
+</form>
+</div>
+</textarea>
+
+<!-- @TEMPLATE -->
+<textarea name="css" data-src="./index.css"></textarea>
+<textarea name="js"  data-src="./index.js"></textarea>
+<!-- /@TEMPLATE -->

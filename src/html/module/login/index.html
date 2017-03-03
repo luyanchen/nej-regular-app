@@ -1,0 +1,33 @@
+<meta charset="utf-8"/>
+<textarea name="txt" id="module-id-d0">
+  <div></div>
+</textarea>
+<textarea name="txt" id="regular-rgl-0">
+  <form id="loginform" method="post"  >
+    <div >
+      <div class="u-div-20"></div>
+      <div class="u-div-5"></div>
+      <input r-model="phone" class="u-input" type="text" name="phone" autocomplete="off" placeholder="请输入11位手机号码" on-click={this.clearmsg()} on-keyup={this.checkEmpty()}/>
+      <div class="u-div-10"></div>
+      <input r-model="pwd" class="u-input" type="password" name="password" autocomplete="off" placeholder="请输入密码" on-click={this.clearmsg()} on-keyup={this.checkEmpty()}/>
+      <div class="u-div-50"></div>
+      <div class="u-div-10"></div>
+      <div class="u-btn-wrap">
+        <div class="u-btn" r-class={btn}  on-click={this.login()}>登录</div>
+      </div>
+      <div class="u-div-40"></div>
+      <div class="u-slink s-fc-g ">
+          <p><a href="#/m/register/">注册账号</a></p>
+      </div>
+      <div class="u-div-20"></div>
+      <div class="u-tips">  
+        <div  class="negative" >{msg}</div>
+      </div>
+    </div>
+  </form>
+</textarea>
+
+<!-- @TEMPLATE -->
+<textarea name="css" data-src="./index.css"></textarea>
+<textarea name="js"  data-src="./index.js"></textarea>
+<!-- /@TEMPLATE -->

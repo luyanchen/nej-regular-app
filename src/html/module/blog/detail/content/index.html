@@ -1,0 +1,30 @@
+<meta charset="utf-8"/>
+<textarea name="txt" id="module-id-d7">
+  <div></div>
+</textarea>
+<textarea name="txt" id="regular-rgl-7">    
+<session>
+  <article>
+    <div class="m-article-wrap">
+      <div class="top">
+        <div class="title" id="wx-title">{data.title}</div>
+        <div class="source-time">
+          <div id="wx-source">{data.nickname}</div>
+          <div id="wx-date">{data.publishTime|format:'yyyy-MM-dd HH:mm'}</div>
+        </div>
+      </div>
+      <div class="content" >
+        <div id="wx-content">{data.content}</div>
+        <div class="readnum">
+            <span>阅读({data.accessCount})</span>
+            <span>评论({data.commentCount})</span>         
+        </div>
+      </div>
+    </div>
+  </article>
+</session>
+</textarea>
+<!-- @TEMPLATE -->
+<textarea name="css" data-src="./index.css"></textarea>
+<textarea name="js"  data-src="./index.js"></textarea>
+<!-- /@TEMPLATE -->

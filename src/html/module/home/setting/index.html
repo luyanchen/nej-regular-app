@@ -1,0 +1,51 @@
+<meta charset="utf-8"/>
+<textarea name="txt" id="module-id-d10">
+  <div></div>
+</textarea>
+<textarea name="txt" id="regular-rgl-10">
+<div>
+  <div class="m-setting-wrap" >
+    <div class="u-div-20"></div>
+    <div class="u-div-5"></div>
+    <div class="page" id="first-page"  >
+      <div  class="u-input" >          
+        <a href="#/m/home/editpwd/">
+          <div class="g-flexbox  list">
+            <div class="g-flex1 s-fc-b">
+              <label>修改密码</label>
+            </div>
+            <div class="g-flex1 f-ta-right" >
+              <img  src="../../res/images/go.png"/>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="u-div-50"></div>
+      <div class="u-btn-wrap">
+        <div class="u-btn red "  on-click={this.loginout()}>退出登录</div>
+      </div>
+    </div>
+  </div>
+  <div class="m-popup-wrap" r-hide={pophide} >
+    <div class="cover"></div>
+    <div class="con-wrap">
+      <div class="con">
+        <div>确定退出？</div>
+      </div>
+      <div class="g-flexbox">
+        <div class="u-btn-s-wrap g-flex1">
+            <div class="u-btn default "  on-click={this.cancel()}>取消</div>
+        </div>
+        <div class="u-btn-s-wrap g-flex1">
+            <div class="u-btn active"  on-click={this.confirm()}>确定</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</textarea>
+
+<!-- @TEMPLATE -->
+<textarea name="css" data-src="./index.css"></textarea>
+<textarea name="js"  data-src="./index.js"></textarea>
+<!-- /@TEMPLATE -->

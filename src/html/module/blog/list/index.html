@@ -1,0 +1,64 @@
+<meta charset="utf-8"/>
+<textarea name="txt" id="module-id-d4">
+  <div></div>
+</textarea>
+<textarea name="txt" id="regular-rgl-4">
+  <div class="s-bg-white">
+    <div class="u-div-5"></div>
+      <div id="wrapper" >
+        <div id="pullDown">
+            <span >正在更新...</span>
+        </div>
+        <div id="scroller">
+          <div class="m-list-wrap" >
+               {#list list as x}
+              <div class="list "> 
+                  <div class ="g-flexbox" >
+                    <div class="headimg"><img  src="{x.headimg}" /></div>
+                    <div class="g-flex1 center" >
+                      <a href="#/m/index/detail/?blogid={x._id}">
+                      <div class="title"><span class="titleline">{x.title}</span></div>
+                      <div class="content"><span class="sourceline">{x.nickname}</span></div>
+                      <div class="content" >{x.publishTime|format:'yyyy-MM-dd HH:mm'}</div>
+                      </a>
+                      <div class="bottom">
+                          <span class="left ">阅读({x.accessCount})</span>
+                          <span class="left ">评论({x.commentCount})</span>
+                      </div>
+                    </div>
+                    <div class="botton f-ta-center s-fc-y " >
+                          {#if x.canDelete}
+                          <div class="delblog" on-click={this.delItem(x._id,x_index)}>删除</div>
+                           {/if}
+                    </div>
+                  </div>
+                  <hr/>
+              </div>
+              {/list}
+          </div>
+        </div>
+        <div class="u-div-40"></div>
+    </div>
+  </div>
+  <div class="m-popup-wrap" r-hide={pophide} >
+    <div class="cover"></div>
+    <div class="con-wrap">
+      <div class="con">
+        <div>确定删除？</div>
+      </div>
+      <div class="g-flexbox">
+        <div class="u-btn-s-wrap g-flex1">
+            <div class="u-btn default "  on-click={this.cancel()}>取消</div>
+        </div>
+        <div class="u-btn-s-wrap g-flex1">
+            <div class="u-btn active"  on-click={this.confirm()}>确定</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</textarea>
+<!-- @TEMPLATE -->
+<textarea name="css" data-src="./index.css"></textarea>
+<textarea name="js"  data-src="./index.js"></textarea>
+<!-- /@TEMPLATE -->

@@ -1,0 +1,64 @@
+<meta charset="utf-8"/>
+<textarea name="txt" id="module-id-d1">
+  <div></div>
+</textarea>
+<textarea name="txt" id="regular-rgl-1">
+  <form id="registerform" method="post">
+      <div class="u-div-20"></div>
+      <div class="page" r-hide="page != 'first'" >
+        <input r-model="phone" class="u-input" type="text" name="phone" autocomplete="off" placeholder="请输入11位手机号码" on-click={this.clearmsg()} on-keyup={this.checkEmpty()} />
+        <div class="u-div-10"></div>
+        <div class="g-flexbox">
+          <div class="g-flex1">
+          <input r-model="code" class=" u-input u-input-left" type="text" name="code" autocomplete="off" placeholder="请输入验证码" on-click={this.clearmsg()} on-keyup={this.checkEmpty()}/></div>
+          <div class="u-code f-ta-center">
+            <div class="active" on-click={this.getCode()}>获取验证码</div>
+          </div>
+        </div>
+        <div class="u-div-50"></div>
+        <div class="u-div-10"></div>
+        <div class="u-btn-wrap">
+          <div class="u-btn" r-class={btn} on-click={this.nextPage()}>下一步</div>
+        </div>
+        <div class="u-div-40"></div>
+        <div class="u-slink s-fc-g ">
+          <p><a href="#/m/login/">已有账号，直接登录</a></p>
+        </div>
+      </div>
+      <div class="page" r-hide="page != 'second'" >
+        <input r-model="pwd" class="u-input" type="password" name="pwd" autocomplete="off" placeholder="请输入密码" on-click={this.clearmsg()} on-keyup={this.checkEmpty()} />
+        <div class="u-div-10"></div>
+        <input r-model="repwd" class="u-input" type="password" name="repwd" autocomplete="off" placeholder="请输入重复密码" on-click={this.clearmsg()}  on-keyup={this.checkEmpty()} />
+        <div class="u-div-10"></div>
+        <input r-model="nickname" class="u-input" type="text" name="nickname" autocomplete="off" placeholder="请输入昵称" on-click={this.clearmsg()} on-keyup={this.checkEmpty()} />
+        <div class="u-div-50"></div>
+        <div class="u-btn-wrap">
+          <div class="u-btn" r-class={btn} on-click={this.nextPage()}>下一步</div>
+        </div>
+      </div>    
+      <div class="page" r-hide="page != 'third'">
+        <div class="u-label">请选择您性别</div>
+        <div  class="u-input select-item" on-click={this.changeSex(0)}>
+          <div class="f-taleft sex " r-class={sexclass0} ><label>男</label></div>
+        </div>
+        <div  class="u-input select-item" on-click={this.changeSex(1)}>
+          <div class="f-taleft sex" r-class={sexclass1} ><label>女</label></div>
+        </div>
+        <div class="u-div-50 "></div>
+        <div class="u-btn-wrap">
+          <div class="u-btn active"   on-click={this.register()}>完成</div>
+        </div>
+        </div> 
+        <div class="u-div-20"></div>    
+      </div>
+      <div class="u-div-20"></div>
+      <div class="u-tips">  
+        <div  r-class={msgclass} >{msg}</div>
+      </div>
+  </form>
+</textarea>
+
+<!-- @TEMPLATE -->
+<textarea name="css" data-src="./index.css"></textarea>
+<textarea name="js"  data-src="./index.js"></textarea>
+<!-- /@TEMPLATE -->

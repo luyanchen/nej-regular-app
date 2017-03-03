@@ -1,0 +1,67 @@
+.m-list-wrap{
+	background:#fff;
+	padding:0px 12px;
+}
+.m-list-wrap .list{
+	width:100%;
+	min-height:82px;
+}
+.m-list-wrap .list .headimg{
+	width:50px;
+}
+.m-list-wrap .list .headimg img{
+	width:40px;
+	height:40px;
+	border-radius:20px 20px;
+}
+.m-list-wrap .list .center{
+	padding:5px 5px;
+}
+.m-list-wrap .list .center .title{
+	font-size:16px;
+	color:#333;
+	margin-bottom:5px;
+	line-height:16px;
+}
+.m-list-wrap .list .center .content{
+	font-size:13px;
+	color:#999;
+	margin:5px 0px;
+}
+.m-list-wrap .list .center .bottom{
+	line-height:16px;
+	margin:5px 0px;
+}
+.m-list-wrap .list .center .bottom .left{
+	font-size:13px;
+	padding-right:15px;
+}
+.m-list-wrap .list .center .bottom .icon{
+	padding-right:5px;
+}
+.m-list-wrap .list .center .bottom img{
+	width:10px;
+	height:10px;
+	margin-top:-3px;
+}
+.m-list-wrap .list .center .bottom .right{
+	font-size:13px;
+	color:#999;
+	padding-top:2px;
+}
+.m-list-wrap .list .botton{
+	width:100px;
+}
+#wrapper{
+	position:relative;
+}
+#pullDown{
+	display:none;
+	background:#fff;
+	text-align:center;
+}
+#scroller{
+	position:relative;
+	margin-top:0px;
+	width:100%;
+}

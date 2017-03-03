@@ -1,0 +1,12 @@
+.m-publish-wrap .u-textarea-wrap{
+	margin:0px 12px;
+}
+.m-publish-wrap .textarea{
+	padding:0px;
+	background:#fff;
+	height:180px;
+	color:#999;
+	font-size:14px;
+	border-radius:3px;
+	width:100%;
+}
