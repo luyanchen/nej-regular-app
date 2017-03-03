@@ -5,30 +5,34 @@
  <li><a href="#show">app展示</a></li>
  </ul>
 #<div id="#descript">概述</div>
-nej-app是采用网易前端框架<a href="https://github.com/NEYouFan/nej-framework">NEJ</a>和<a href="https://github.com/regularjs/regular">regularjs</a>的mini blog app，通过模块调度系统实现单页面应用。CSS预处理器采用<a href="https://github.com/leeluolee/mcss">MCSS</a>
-本demo为前端代码，需结合<a href="https://github.com/luyanchen/node-blog/">api</a>使用。
+nej-app是采用网易前端框架<a href="https://github.com/NEYouFan/nej-framework">NEJ</a>和<a href="https://github.com/regularjs/regular">Regularjs</a>的mini blog app，通过模块调度系统实现单页面应用。CSS预处理器采用<a href="https://github.com/leeluolee/mcss">MCSS</a>
+本demo为前端代码，需结合<a href="https://github.com/luyanchen/node-blog/">API</a>使用。
 
 本demo仅用于个人学习(持续更新中)。
  <ul>
  <li>前端：<a href="https://github.com/luyanchen/nej-regular-app/">基于NEJ+Regularjs+MCSS开发的HTML5移动单页应用</a></li>
  <li>后端：<a href="https://github.com/luyanchen/node-blog/">nodejs+express+mongodb</a></li>
  </ul>
-框架： 
-app涉及NEJ主要特性包括：
-    依赖管理系统
-    模板系统
-    模块调度
-    组件系统
-    远程调用 
-    缓存cache
-    常用模块:element,event,util,chain,ajax,jst,cache,tab,list等
- app涉及Regular主要特性包括：
-    模板
-    组件
-    指令
-    事件
-    过滤器
- run:
+
+###app涉及NEJ主要特性包括：
+<ul>
+    <li>依赖管理系统</li>
+    <li>模板系统</li>
+    <li>模块调度</li>
+    <li>组件系统</li>
+    <li>远程调用</li>
+    <li>缓存cache</li>
+    <li>常用模块:element,event,util,chain,ajax,jst,cache,tab,list等</li>
+ </ul>
+ ##app涉及Regular主要特性包括：
+ <ul>
+    <li>模板</li>
+    <li>组件</li>
+    <li>指令</li>
+    <li>事件</li>
+    <li>过滤器</li>
+ </ul>
+ ###run:
  1. 启动服务器（<a href="https://github.com/luyanchen/node-blog/">nodejs+express+mongodb</a>）
  2. 将/nej-regular-app/src/html/app.html和/nej-regular-app/src/html/login.html中的API_PATH改为服务器API路径(如：<a href="https://github.com/luyanchen/node-blog/">nodejs+express+mongodb</a>中的地址为http://localhost:3000/)
  
