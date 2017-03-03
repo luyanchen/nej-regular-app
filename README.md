@@ -14,7 +14,7 @@ nej-app是采用网易前端框架<a href="https://github.com/NEYouFan/nej-frame
  <li>后端：<a href="https://github.com/luyanchen/node-blog/">nodejs+express+mongodb</a></li>
  </ul>
 
-###app涉及NEJ主要特性包括：
+<h4>app涉及NEJ主要特性包括</h4>
 <ul>
     <li>依赖管理系统</li>
     <li>模板系统</li>
@@ -24,7 +24,8 @@ nej-app是采用网易前端框架<a href="https://github.com/NEYouFan/nej-frame
     <li>缓存cache</li>
     <li>常用模块:element,event,util,chain,ajax,jst,cache,tab,list等</li>
  </ul>
- ###app涉及Regular主要特性包括：
+ 
+<h4>app涉及Regular主要特性包括</h4>
  <ul>
     <li>模板</li>
     <li>组件</li>
@@ -33,7 +34,7 @@ nej-app是采用网易前端框架<a href="https://github.com/NEYouFan/nej-frame
     <li>过滤器</li>
  </ul>
  
- ###run:
+ <h4>run</h4>
  1. 启动服务器（<a href="https://github.com/luyanchen/node-blog/">nodejs+express+mongodb</a>）
  2. 将/nej-regular-app/src/html/app.html和/nej-regular-app/src/html/login.html中的API_PATH改为服务器API路径(如：<a href="https://github.com/luyanchen/node-blog/">nodejs+express+mongodb</a>中的地址为http://localhost:3000/)
  
