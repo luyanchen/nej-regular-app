@@ -89,8 +89,9 @@ _$ajaxListSend为配合list.js返回，直接将data传给回调函数。
 <h4><div id="tab">重写tab</div></h4>
 底部菜单和首页顶部菜单用tab组件,由于在底部菜单切换时需要修改图片，因此在/pro/tab.js中重写了TabView的_$match方法，新增onchange事件，当切换新菜单时，对应替换图片。
 <h4><div id="regular">Regular组件</div></h4>
-每个模块对应一个Regular组件，定义如下：
+每个模块对应一个Regular组件
 <h5>login.html</h5>
+
 <pre><code>
 <meta charset="utf-8"/>
 <textarea name="txt" id="module-id-d0">
@@ -120,25 +121,22 @@ _$ajaxListSend为配合list.js返回，直接将data传给回调函数。
     </div>
   </form>
 </textarea>
-</pre></code>
+</code></pre>
 <h5>login.js</h5>
 Regular组件定义在__doBuild中，并在onrefresh中更新数据（如有需要）。
 <pre><code>
-    /**
+     /**
      * 构建模块
      * @return {Void}
      */
     _pro.__doBuild = function(){
         this.__super();
-        //组件节点容器
         this.__body = _e._$html2node(
             _t0._$getTextTemplate('module-id-d0')
         );
-        //包含模板的容器节点的选择器
         this._template = _e._$html2node(
             _t0._$getTextTemplate('regular-rgl-0')
         );
-        //定义组件
         var Component = Regular.extend({
           template:this._template,
           data: {phone:'',pwd:'',msg:'',empty:true,btn:{active:false,default:true}},
