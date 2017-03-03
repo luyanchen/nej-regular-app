@@ -92,9 +92,9 @@ _$ajaxListSend为配合list.js返回，直接将data传给回调函数。
 每个模块对应一个Regular组件
 <h5>module/login.html</h5>
 
-
-`<textarea name="txt" id="module-id-d0">
-  <div></div>
+```html
+<textarea name="txt" id="module-id-d0">
+   <div></div>
 </textarea>
 <textarea name="txt" id="regular-rgl-0">
   <form id="loginform" method="post"  >
@@ -119,12 +119,12 @@ _$ajaxListSend为配合list.js返回，直接将data传给回调函数。
       </div>
     </div>
   </form>
-</textarea>`
-
+</textarea>
+```
 
 <h5>module/login.js</h5>
 Regular组件定义在__doBuild中，并在onrefresh中更新数据（如有需要）。
-`
+```javascript
      /**
      * 构建模块
      * @return {Void}
@@ -187,7 +187,7 @@ Regular组件定义在__doBuild中，并在onrefresh中更新数据（如有需�
         this._component.$inject(this.__body);
         
     };
-`
+```
 #<div id="show">app展示</div>
 <img src="https://github.com/luyanchen/nej-regular-app/blob/master/res/dispaly/1.png" width = "30%" />
 
