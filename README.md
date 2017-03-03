@@ -1,4 +1,4 @@
-# nej-regular-app:<a href="https://github.com/luyanchen/nej-regular-app/">基于NEJ+Regularjs+MCSS开发的HTML5移动单页应用</a>
+<a href="https://github.com/luyanchen/nej-regular-app/">基于NEJ+Regularjs+MCSS开发的HTML5移动单页应用</a>
  <ul>
  <li><a href="#descript">概述</a></li>
  <li><a href="#keyword">核心内容</a></li>
