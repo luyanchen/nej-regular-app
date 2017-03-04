@@ -90,102 +90,91 @@ _$ajaxListSend为配合list.js返回，直接将data传给回调函数。
 底部菜单和首页顶部菜单用tab组件,由于在底部菜单切换时需要修改图片，因此在/pro/tab.js中重写了TabView的_$match方法，新增onchange事件，当切换新菜单时，对应替换图片。
 <h4><div id="regular">Regular组件</div></h4>
 每个模块对应一个Regular组件
-<h5>module/login.html</h5>
+<h5>module/blog/content/index.html</h5>
 
 ```html
-<textarea name="txt" id="module-id-d0">
-   <div></div>
+<meta charset="utf-8"/>
+<textarea name="txt" id="module-id-d7">
+  <div></div>
 </textarea>
-<textarea name="txt" id="regular-rgl-0">
-  <form id="loginform" method="post"  >
-    <div >
-      <div class="u-div-20"></div>
-      <div class="u-div-5"></div>
-      <input r-model="phone" class="u-input" type="text" name="phone" autocomplete="off" placeholder="请输入11位手机号码" on-click={this.clearmsg()} on-keyup={this.checkEmpty()}/>
-      <div class="u-div-10"></div>
-      <input r-model="pwd" class="u-input" type="password" name="password" autocomplete="off" placeholder="请输入密码" on-click={this.clearmsg()} on-keyup={this.checkEmpty()}/>
-      <div class="u-div-50"></div>
-      <div class="u-div-10"></div>
-      <div class="u-btn-wrap">
-        <div class="u-btn" r-class={btn}  on-click={this.login()}>登录</div>
+<textarea name="txt" id="regular-rgl-7">    
+<session>
+  <article>
+    <div class="m-article-wrap">
+      <div class="top">
+        <div class="title" id="wx-title">{data.title}</div>
+        <div class="source-time">
+          <div id="wx-source">{data.nickname}</div>
+          <div id="wx-date">{data.publishTime|format:'yyyy-MM-dd HH:mm'}</div>
+        </div>
       </div>
-      <div class="u-div-40"></div>
-      <div class="u-slink s-fc-g ">
-          <p><a href="#/m/register/">注册账号</a></p>
-      </div>
-      <div class="u-div-20"></div>
-      <div class="u-tips">  
-        <div  class="negative" >{msg}</div>
+      <div class="content" >
+        <div id="wx-content">{data.content}</div>
+        <div class="readnum">
+            <span>阅读({data.accessCount})</span>
+            <span>评论({data.commentCount})</span>         
+        </div>
       </div>
     </div>
-  </form>
+  </article>
+</session>
 </textarea>
+<!-- @TEMPLATE -->
+<textarea name="css" data-src="./index.css"></textarea>
+<textarea name="js"  data-src="./index.js"></textarea>
+<!-- /@TEMPLATE -->
 ```
 
-<h5>module/login.js</h5>
+<h5>module/blog/content/index.js</h5>
 Regular组件定义在__doBuild中，并在onrefresh中更新数据（如有需要）。
 ```javascript
-     /**
+         /**
      * 构建模块
      * @return {Void}
      */
     _pro.__doBuild = function(){
         this.__super();
         this.__body = _e._$html2node(
-            _t0._$getTextTemplate('module-id-d0')
+            _t0._$getTextTemplate('module-id-d7')
         );
         this._template = _e._$html2node(
-            _t0._$getTextTemplate('regular-rgl-0')
+            _t0._$getTextTemplate('regular-rgl-7')
         );
+       
+        //定义博客内容组件
         var Component = Regular.extend({
           template:this._template,
-          data: {phone:'',pwd:'',msg:'',empty:true,btn:{active:false,default:true}},
-          //判断输入
-          checkEmpty:function($event){
-            if(this.data.phone !== '' && this.data.pwd != ''){
-              this.data.empty = false;
-              this.data.btn = {active:true,default:false};
-            }else{
-              this.data.empty = true;
-              this.data.btn = {active:false,default:true};
-            }   
+          data: {data:{},blogid:''}, 
+          getBlogDetail:function(){
+            _u._$ajaxSend({data:{blogid:this.data.blogid},url:'blog/detail',method:'get',callback:this.getBlogDetailCallback._$bind(this)});                               
           },
-          //清空提示语
-          clearmsg:function($event){
-              this.data.msg = '';//提示语置空        
-          },
-          //登录
-          login: function($event){
-            this.checkEmpty();
-            if(this.data.empty){
-              return;
-            }
-            var _phone = this.data.phone;
-            var _pwd = this.data.pwd; 
-            if(!_u._$checkPhone({phone:_phone})){
-              this.data.msg = "请输入正确的手机号";
-              return;
-            }
-            _u._$ajaxSend({data:{phone:_phone,pwd:_pwd},url:'login/login',method:'post',callback:this.loginCallback._$bind(this)});                         
-          },
-          //登录
-          loginCallback : function(_result,$event){   
+          getBlogDetailCallback: function(_result) {
             if(_result.code == 200){
-                var _data = _result.data;
-                _u._$setJsonDataInStorage(_data); 
-                location.href="./app.html";
+                this.data.data = _result.data;     
+            }else if(_result.code == 202){           
+                alert(_result.error);
+                history.go(-1);
             }else{
-                this.data.msg = _result.error;
+                alert(_result.error);
             }
-            this.$update();//异步，手动data同步到view层.
-
-          }
+            this.$update();
+          }    
         });
         this._component = new Component({
 
         });
         this._component.$inject(this.__body);
-        
+    };
+   /**
+     * 刷新模块
+     * @param  {Object} 配置信息
+     * @return {Void}
+     */
+    _pro.__onRefresh = function(_options){
+        this.__super(_options);
+        this._component.data.blogid = _options.param.blogid; 
+        this._component.getBlogDetail();         
+    };
     };
 ```
 #<div id="show">app展示</div>
