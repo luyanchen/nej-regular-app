@@ -36,7 +36,7 @@ NEJ.define([
         this._template = _e._$html2node(
             _t0._$getTextTemplate('regular-rgl-0')
         );
-        new Regular({
+        var Component = Regular.extend({
           template:this._template,
           data: {phone:'',pwd:'',msg:'',empty:true,btn:{active:false,default:true}},
           //判断输入
@@ -79,7 +79,11 @@ NEJ.define([
             this.$update();//异步，手动data同步到view层.
 
           }
-        }).$inject(this.__body);
+        });
+        this._component = new Component({
+
+        });
+        this._component.$inject(this.__body);
         
     };
         // notify dispatcher
